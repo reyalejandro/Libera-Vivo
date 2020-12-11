@@ -1,6 +1,6 @@
 <?php 
   include_once 'dbConnection.php';
-
+  session_start();
   if (!empty($_POST['titulo']) && !empty($_POST['copete']) && !empty($_POST['imagen']) && !empty($_POST['cuerpo']) && !empty($_POST['imagen_cuerpo'])) {
   $pdo = connect();
 
@@ -32,6 +32,8 @@
 
   $stmt -> execute();
 
-  header('location: index.html');
+  unset($_SESSION['pass']);
+
+  header('location: index.php');
 }else {header('location: error.html'); }
 ?>

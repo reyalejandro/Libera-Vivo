@@ -1,3 +1,4 @@
+<?php session_start(); ?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +17,7 @@
         <div class="container">
     <div class="row">
         <div class="col-md-12"> 
-           <a href="index.html"> <h1 id="titulo"> Libera vivo </h1></a>
+           <a href="index.php"> <h1 id="titulo"> Libera vivo </h1></a>
         </div>
     </div>
 </div>
@@ -26,7 +27,7 @@
        <br> <div class="container-fluid px-5">
             <div class="row">
                 <div class="col-md-12" id="contNoticiascomp">
-                <?php include 'getNoticias.php';
+                <?php include 'getNoticiaId.php';
                     $noticias = getNoticia($_GET['id']);
 
                         echo '<h1>',$noticias['titulo'],'</h1>','<br>';

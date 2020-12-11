@@ -1,5 +1,6 @@
 <?php 
   include 'dbConnection.php';
+  session_start();
 
   $pdo = connect();
 
@@ -8,6 +9,6 @@
   $stmt -> bindParam(':id',$_GET['id']);
 
   $stmt -> execute();
-
-  header('location: admin.php');
+  unset($_SESSION['pass']);
+  header('location: index.php');
 ?>

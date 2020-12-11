@@ -1,4 +1,4 @@
- fetch('index.php')
+ fetch('getNoticia.php')
       .then(res => res.json())
       .then(data => {
         
@@ -40,7 +40,7 @@ const IniciarSesion = () =>
     if(response==0)
     {
       
-    } else{ window.location = "admin.php"; }
+    } else { window.location = "admin.php";}
 
 
   });

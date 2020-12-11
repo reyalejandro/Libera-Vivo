@@ -1,3 +1,8 @@
+<?php session_start(); 
+ if (isset($_SESSION['pass']) && $_SESSION['pass'] == 1234) {
+   header('location: admin.php');
+ }else{
+?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +21,8 @@
                 
                
                     <input type="password" id="pass" name="password" placeholder="1234">
-                    <button type="button" id="btnCheckpass" onclick="IniciarSesion()" class="btn btn-primary btn-dark" data-toggle="modal" data-target="#exampleModal">Validar</button>
+                                                             
+<button type="button" id="btnCheckpass"  onclick= "IniciarSesion()" class="btn btn-primary btn-dark" data-toggle="modal" data-target="#exampleModal">Validar</button>
                
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -37,7 +43,7 @@
   </div>
 </div>
             </div>
-            <form action="index.html"style="margin-left:1.3em;">
+            <form action="index.php"style="margin-left:1.3em;">
             <button type="submit" class="btn btn-secondary btn-dark">Volver</button>
 </form><br>
         </div>
@@ -48,9 +54,10 @@
 <div class="divAlerta"></div>
 
 
-<script src="code.js"></script>
+ <script src="code.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 </html>
+ <?php } ?>

@@ -1,4 +1,5 @@
-<?php include('getNoticias.php');
+<?php include('getNoticiaId.php');
+ session_start();
 if (isset($_GET['id'])) {
     $noticia = getNoticia($_GET['id']);
   } else {
@@ -19,7 +20,6 @@ if (isset($_GET['id'])) {
   $stmt -> execute();
 
   $noticias = $stmt -> fetchAll(PDO::FETCH_ASSOC);
-
 ?>
 
 
@@ -38,7 +38,7 @@ if (isset($_GET['id'])) {
 <div class="container" style="margin-bottom:3em">
     <div class="row">
         <div class="col-md-12"> 
-           <a href="index.html"> <h1 id="titulo"> Libera vivo </h1></a>
+           <a href="index.php"> <h1 id="titulo"> Libera vivo </h1></a>
         </div>
     </div>
 </div>
