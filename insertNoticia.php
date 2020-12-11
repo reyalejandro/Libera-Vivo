@@ -1,7 +1,7 @@
 <?php 
   include_once 'dbConnection.php';
   session_start();
-  if (!empty($_POST['titulo']) && !empty($_POST['copete']) && !empty($_POST['imagen']) && !empty($_POST['cuerpo']) && !empty($_POST['imagen_cuerpo'])) {
+  if (!empty($_POST['titulo']) && !empty($_POST['copete']) && !empty($_POST['imagen']) && !empty($_POST['cuerpo'])) {
   $pdo = connect();
 
   if (isset($_POST['id']) && $_POST['id'] != "") {
